@@ -5,18 +5,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>..:: <?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?> ::..</title>
 		<?php wp_head(); ?>
-		<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />	
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>	
 		<link href="https://fonts.googleapis.com/css?family=Glegoo|Roboto" rel="stylesheet" />
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-		<script type="text/javascript">
-			jQuery( document ).ready( function() {
-				if( jQuery( "#header-title" ).height() > jQuery( "#main-navbar" ).height() ) {
-					jQuery( "#main-header" ).height( jQuery( "#header-title" ).height() + 20 );
-				} else {
-					jQuery( "#main-navbar" ).height( jQuery( "#header-title" ).height() + 20 );
-				}
-			} );
-		</script>
 	</head>
 	<body>
 		
@@ -28,6 +20,7 @@
 			</div>
 
 			<nav id="main-navbar">
+				<button type="button" class="main-menu-btn fa fa-2x fa-bars" onclick="jQuery( '.menu-menumain-container' ).toggle( 1000 )"></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'principal' ) ); ?>
 			</nav><!-- #main-navbar -->
 

@@ -52,16 +52,8 @@ p a {
 	font-family: 'Roboto', sans-serif;
 }
 
-#header-title {
-	position: absolute;
-	top: 20px;
-	left: 20px;
-}
-
 #main-navbar {
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
+	text-align: right;
 }
 
 #main-navbar ul {
@@ -74,9 +66,35 @@ p a {
 	margin-right: 20px;
 }
 
+.main-menu-btn {
+	display: none;
+}
+
+@media screen and ( max-width: 500px ) {
+	#main-navbar ul li {
+		display: block;
+		margin-right: 0;
+		text-align: center;
+		padding: 25px 10px;
+	}
+
+	.main-menu-btn {
+		background-color: transparent;
+		border: 1px solid silver;
+		border-radius: 5px;
+		color: #fff;
+		padding: 5px;
+		display: inline-block;
+	}
+
+	.menu-menumain-container {
+		display: none;
+	}
+}
+
 #main-container {
 	width: 80%;
-	min-width: 350px;
+	min-width: 275px;
 	margin: 40px auto; 
 }
 
@@ -90,7 +108,7 @@ p a {
 
 #main-container .content {
 	width: 70%;
-	min-width: 400px;
+	min-width: 275px;
 }
 
 #main-container .content.fullwidth-layout {
