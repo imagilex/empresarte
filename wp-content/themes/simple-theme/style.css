@@ -189,6 +189,11 @@ p a {
 	padding: 50px 0;
 }
 
+img.alignleft, img.alignright {
+	margin: 10px;
+	border-radius: 5px;
+}
+
 img.alignleft {
 	float: left;
 }
