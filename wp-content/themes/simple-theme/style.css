@@ -188,3 +188,11 @@ p a {
 	font-family: 'Roboto', sans-serif;
 	padding: 50px 0;
 }
+
+img.alignleft {
+	float: left;
+}
+
+img.alignright {
+	float: right;
+}
