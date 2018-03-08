@@ -20,7 +20,7 @@
 			</div>
 
 			<nav id="main-navbar">
-				<button type="button" class="main-menu-btn fa fa-2x fa-bars" onclick="jQuery( '.menu-menumain-container' ).toggle( 1000 )"></button>
+				<button type="button" class="main-menu-btn" onclick="jQuery( '.menu-menumain-container' ).toggle( 1000 )"><span class="fa fa-2x fa-bars"></span></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'principal' ) ); ?>
 			</nav><!-- #main-navbar -->
 
