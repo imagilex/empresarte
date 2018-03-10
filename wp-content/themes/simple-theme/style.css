@@ -5,22 +5,18 @@ Theme URI: hhtp://www.imagilex.com.mx
 Description: Tema simple
 Author: Rubén Ramírez Gómez
 Author URI: mailto:rramirez@imagilex.com.mx
-Version: 1.0.0
-Tags: simple, black
+Version: 1.0.1
+Tags: responsive, minimalist, simple, white, black, social navigation bar, theme options
+Text Domain: simple-theme
+License: GNU General Public License v2 or Later
+License URI: http://www.gnu.org/licences/gpl-2.0.html
 
 */
 
 body {
 	font-size: 14pt;
-	color: #000;
-	font-family: 'Roboto', sans-serif;
 	padding: 0;
 	margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	color: rgb( 133, 164, 97 );
-	font-family: 'Glegoo', sans-serif;
 }
 
 a {
@@ -34,22 +30,54 @@ a:hover, a:active {
 
 p {
 	line-height: 1.5em;
+	text-align: justify;
 }
 
 p a {
 	text-decoration: underline;
 }
 
-#main-header {
-	color: #fff;
-	background-color: #000;
-	padding: 15px;
-	margin: 0;
+img.alignleft, img.alignright {
+	margin: 10px;
 }
 
-#main-header h1, #main-header h2,#main-header h3, #main-header h4, #main-header h5, #main-header h6 {
-	color: #fff;
-	font-family: 'Roboto', sans-serif;
+img.alignleft {
+	float: left;
+}
+
+img.alignright {
+	float: right;
+}
+
+img.fullwidth {
+	width: 100%;
+}
+
+#main-header {
+	padding: 15px;
+	margin: 0;
+	height: 70px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#header-title h1 img {
+	height: 40px;
+}
+#header-title h1 {
+	40px;
+	overflow: hidden;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#header-title h3 {
+	30px;
+	margin-top: 0;
+	margin-bottom: 0;
+	overflow: hidden;
 }
 
 #main-navbar {
@@ -82,7 +110,6 @@ p a {
 		background-color: transparent;
 		border: 1px solid silver;
 		border-radius: 5px;
-		color: #fff;
 		padding: 5px;
 		display: inline-block;
 	}
@@ -177,16 +204,16 @@ p a {
 }
 
 #main-footer {
-	margin-top: 60px;
-	background-color: #000;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
 }
 
 #main-footer h4 {
 	text-align: center;
-	margin: 30px 0 0;
-	color: #fff;
-	font-family: 'Roboto', sans-serif;
-	padding: 50px 0;
+	padding: 10px;
+	margin: 0;
 }
 
 .content article img {
@@ -194,18 +221,85 @@ p a {
 	max-width: 100%;
 }
 
-img.alignleft, img.alignright {
-	margin: 10px;
+#social-navbar {
+	margin-bottom: 50px;
 }
 
-img.alignleft {
-	float: left;
+#social-navbar ul {
+	max-width: 1280px;
+	margin: 0 auto;
+	text-align: center;
+	list-style: none;
+	padding: 15px 0 15px 10px;
 }
 
-img.alignright {
-	float: right;
+#social-navbar ul li {
+	display: inline-block;
+	margin: 0 10px 0 0;
+	width: 250px;
+	border: 2px solid;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px;
+	vertical-align: middle;
 }
 
-img.fullwidth {
-	width: 100%;
+#social-navbar ul li span {
+	display: block;
+}
+
+#social-navbar ul li a, #social-navbar ul li a:hover, #social-navbar ul li a:active {
+	text-decoration: none;
+}
+
+#social-navbar ul li a {
+	display: block;
+}
+
+#social-navbar ul li .field {
+	font-style: italic;
+}
+#social-navbar ul li .data {
+	font-weight: bolder;
+}
+
+/***** Colores *****/
+body {
+	color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: rgb( 133, 164, 97 );
+}
+
+#main-header,
+#main-header h1, #main-header h2,#main-header h3, #main-header h4, #main-header h5, #main-header h6,
+#main-footer h4 {
+	color: #fff;
+}
+
+#main-header, #main-footer {
+	background-color: #000;
+}
+
+
+@media screen and ( max-width: 500px ) {
+	.main-menu-btn {
+		color: #fff;
+	}
+}
+
+#social-navbar ul li {
+	border-color: #000;
+}
+
+/***** Fuentes *****/
+body,
+#main-header h1, #main-header h2,#main-header h3, #main-header h4, #main-header h5, #main-header h6,
+#main-footer h4 {
+	font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Glegoo', sans-serif;
 }
