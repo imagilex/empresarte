@@ -38,4 +38,8 @@ function simpleTheme_enqueue_scripts() {
 
 add_action( 'wp_enqueue_scripts' , 'simpleTheme_enqueue_scripts' );
 
+/***** Personalización *****/
+
+require_once get_template_directory() . '/inc/customizer.php' ;
+
 ?>

@@ -16,7 +16,20 @@
 		<header id="main-header">
 
 			<div id="header-title">
-				<h1><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/img/logo.png" /><?php bloginfo( 'name' ); ?></h1>
+				<?php
+				$header_img = get_theme_mod( 'header_img' );
+				?>
+				<h1>
+					<?php
+					if( '' != $header_img ) {
+						?>
+						<img src="<?php echo $header_img; ?>" />
+						<?php
+					} else { 
+						bloginfo( 'name' ); 
+					}
+					?>
+					</h1>
 				<h3><?php bloginfo( 'description' ); ?></h3>
 			</div>
 
