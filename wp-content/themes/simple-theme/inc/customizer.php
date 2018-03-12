@@ -106,13 +106,13 @@ add_action( 'customize_register', 'simpleTheme_theme_customize_register' );
 
 function simpleTheme_theme_customize_css() {
 
-	$color_fuente_pagina = get_theme_mod( 'color_fuente_pagina' );
-	$color_titulos_pagina = get_theme_mod( 'color_titulos_pagina' );
-	$color_fondo_encabezado = get_theme_mod( 'color_fondo_encabezado' );
-	$color_texto_encabezado = get_theme_mod( 'color_texto_encabezado' );
-	$color_fondo_pie_pagina = get_theme_mod( 'color_fondo_pie_pagina' );
-	$color_texto_pie_pagina = get_theme_mod( 'color_texto_pie_pagina' );
-	$color_social_media = get_theme_mod( 'color_social_media' );
+	$color_fuente_pagina = get_theme_mod( 'color_fuente_pagina', '#000' );
+	$color_titulos_pagina = get_theme_mod( 'color_titulos_pagina', '#85a461' );
+	$color_fondo_encabezado = get_theme_mod( 'color_fondo_encabezado', '#000' );
+	$color_texto_encabezado = get_theme_mod( 'color_texto_encabezado', "#fff" );
+	$color_fondo_pie_pagina = get_theme_mod( 'color_fondo_pie_pagina', '#000' );
+	$color_texto_pie_pagina = get_theme_mod( 'color_texto_pie_pagina', "#fff" );
+	$color_social_media = get_theme_mod( 'color_social_media', "#000" );
 
 	?>
 	<style type="text/css">
