@@ -2,25 +2,25 @@
 
 		<?php
 		$sm_tipo_desplegado = get_theme_mod( 'sm_tipo_desplegado' );
-		$sm_instagram = get_theme_mod( 'sm_instagram' );
-		$sm_facebook = get_theme_mod( 'sm_facebook' );
-		$sm_twitter = get_theme_mod( 'sm_twitter' );
-		$sm_twitter = get_theme_mod( 'sm_twitter' );
-		$sm_youtube = get_theme_mod( 'sm_youtube' );
-		$sm_vimeo = get_theme_mod( 'sm_vimeo' );
-		$sm_pinterest = get_theme_mod( 'sm_pinterest' );
-		$sm_vine = get_theme_mod( 'sm_vine' );
-		$sm_linkedin = get_theme_mod( 'sm_linkedin' );
-		$sm_googleplus = get_theme_mod( 'sm_googleplus' );
-		$sm_email = get_theme_mod( 'sm_email' );
-		$sm_telefono = get_theme_mod( 'sm_telefono' );
-		$sm_whatsapp = get_theme_mod( 'sm_whatsapp' );
-		$sm_skype_chat = get_theme_mod( 'sm_skype_chat' );
-		$sm_skype_videollamada = get_theme_mod( 'sm_skype_videollamada' );
-		$sm_messenger = get_theme_mod( 'sm_messenger' );
-		$sm_direccion = get_theme_mod( 'sm_direccion' );
+		$sm_instagram = get_theme_mod( 'sm_instagram', '' );
+		$sm_facebook = get_theme_mod( 'sm_facebook', '' );
+		$sm_twitter = get_theme_mod( 'sm_twitter', '' );
+		$sm_twitter = get_theme_mod( 'sm_twitter', '' );
+		$sm_youtube = get_theme_mod( 'sm_youtube', '' );
+		$sm_vimeo = get_theme_mod( 'sm_vimeo', '' );
+		$sm_pinterest = get_theme_mod( 'sm_pinterest', '' );
+		$sm_vine = get_theme_mod( 'sm_vine', '' );
+		$sm_linkedin = get_theme_mod( 'sm_linkedin', '' );
+		$sm_googleplus = get_theme_mod( 'sm_googleplus', '' );
+		$sm_email = get_theme_mod( 'sm_email', '' );
+		$sm_telefono = get_theme_mod( 'sm_telefono', '' );
+		$sm_whatsapp = get_theme_mod( 'sm_whatsapp', '' );
+		$sm_skype_chat = get_theme_mod( 'sm_skype_chat', '' );
+		$sm_skype_videollamada = get_theme_mod( 'sm_skype_videollamada', '' );
+		$sm_messenger = get_theme_mod( 'sm_messenger', '' );
+		$sm_direccion = get_theme_mod( 'sm_direccion', '' );
 
-		$content_footer = get_theme_mod( 'content_footer' );
+		$content_footer = get_theme_mod( 'content_footer', '' );
 
 		?>
 
