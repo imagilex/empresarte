@@ -17,7 +17,7 @@
 
 			<div id="header-title">
 				<?php
-				$header_img = get_theme_mod( 'header_img' );
+				$header_img = get_theme_mod( 'header_img', '' );
 				?>
 				<h1>
 					<?php
