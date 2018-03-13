@@ -82,7 +82,7 @@ function simpleTheme_theme_customize_register( $wp_customize ) {
 	simpleTheme_add_setting_and_control( $wp_customize, 'sm_pinterest', 'text', 'Pinterest', 'simple-theme_seccion_social_media', null, 'sanitize_text_field', 'Para https://www.pinterest.com.mx/usuario/ debes llenar con <strong>usuario</strong>' );
 	simpleTheme_add_setting_and_control( $wp_customize, 'sm_vine', 'text', 'Vine', 'simple-theme_seccion_social_media', null, 'sanitize_text_field', 'Para https://vine.co/u/999999999999999999 debes llenar con <strong>999999999999999999</strong>' );
 	simpleTheme_add_setting_and_control( $wp_customize, 'sm_linkedin', 'text', 'LinkedIn', 'simple-theme_seccion_social_media', null, 'sanitize_text_field', 'Para https://www.linkedin.com/in/usuario/ debes llenar con <strong>usuario</strong>' );
-	simpleTheme_add_setting_and_control( $wp_customize, 'sm_googleplus', 'text', 'Google+', 'simple-theme_seccion_social_media', null, 'sanitize_text_field', 'Para https://plus.google.com/u/0/+usuario debes llenar con <strong>usuario</strong>' );
+	simpleTheme_add_setting_and_control( $wp_customize, 'sm_googleplus', 'text', 'Google+', 'simple-theme_seccion_social_media', null, 'sanitize_text_field', 'Para https://plus.google.com/+usuario debes llenar con <strong>usuario</strong>' );
 
 	/***** Pie de Página *****/
 
@@ -141,7 +141,7 @@ function simpleTheme_theme_customize_css() {
 			background-color: <?php echo $color_fondo_pie_pagina; ?>;
 		}
 
-		#social-navbar ul li {
+		.social-navbar ul li {
 			border-color: <?php echo $color_social_media; ?>;
 			color: <?php echo $color_social_media; ?>;
 		}
