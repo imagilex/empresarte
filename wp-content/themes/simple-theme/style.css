@@ -214,7 +214,7 @@ img.fullwidth {
 	padding: 10px;
 	margin: 0;
 	font-weight: normal;
-	font-size: 90%;
+	font-size: 80%;
 }
 
 .content article img {
@@ -222,11 +222,11 @@ img.fullwidth {
 	max-width: 100%;
 }
 
-#social-navbar {
+.social-navbar {
 	margin-bottom: 50px;
 }
 
-#social-navbar ul {
+.social-navbar ul {
 	max-width: 1280px;
 	margin: 0 auto;
 	text-align: center;
@@ -234,7 +234,7 @@ img.fullwidth {
 	padding: 15px 0 15px 10px;
 }
 
-#social-navbar ul li {
+.social-navbar ul li {
 	display: inline-block;
 	margin: 0 10px 0 0;
 	width: 250px;
@@ -245,23 +245,23 @@ img.fullwidth {
 	vertical-align: middle;
 }
 
-#social-navbar ul li span {
+.social-navbar ul li span {
 	display: block;
 }
 
-#social-navbar ul li a, #social-navbar ul li a:hover, #social-navbar ul li a:active {
+.social-navbar ul li a, #social-navbar ul li a:hover, #social-navbar ul li a:active {
 	text-decoration: none;
 }
 
-#social-navbar ul li a {
+.social-navbar ul li a {
 	display: block;
 	color: inherit;
 }
 
-#social-navbar ul li .field {
+.social-navbar ul li .field {
 	font-style: italic;
 }
-#social-navbar ul li .data {
+.social-navbar ul li .data {
 	font-weight: bolder;
 	word-wrap: break-word;
 }
