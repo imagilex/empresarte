@@ -213,6 +213,8 @@ img.fullwidth {
 	text-align: center;
 	padding: 10px;
 	margin: 0;
+	font-weight: normal;
+	font-size: 90%;
 }
 
 .content article img {
