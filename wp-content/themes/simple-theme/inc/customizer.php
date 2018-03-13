@@ -92,7 +92,7 @@ function simpleTheme_theme_customize_register( $wp_customize ) {
 		'priority' => 32
 	) );
 
-	simpleTheme_add_setting_and_control( $wp_customize, 'content_footer', 'textarea', 'Texto en Pie de Página', 'simple-theme_seccion_pie_pagina', '', 'sanitize_textarea_field' );
+	simpleTheme_add_setting_and_control( $wp_customize, 'content_footer', 'textarea', 'Texto en Pie de Página', 'simple-theme_seccion_pie_pagina', '' );
 
 	/***** Imagen de Encabezado *****/
 
