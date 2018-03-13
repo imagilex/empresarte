@@ -3,6 +3,6 @@ jQuery( document ).ready( function() {
 		jQuery( "#main-navbar" ).hide();
 	}
 	if( jQuery( "#main-header" ).height() + 5 > parseInt( jQuery( "#main-container" ).css( 'margin-top' ) ) ) {
-		jQuery( "#main-container" ).css( 'margin-top', jQuery( "#main-header" ).height() + 5 );
+		jQuery( "#main-container" ).css( 'margin-top', jQuery( "#main-header" ).height() + 15 );
 	}
 } );
