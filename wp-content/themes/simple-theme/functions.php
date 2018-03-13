@@ -42,4 +42,8 @@ add_action( 'wp_enqueue_scripts' , 'simpleTheme_enqueue_scripts' );
 
 require_once get_template_directory() . '/inc/customizer.php' ;
 
+/***** Contacto, Ubicacion y Redes Sociales *****/
+
+require_once get_template_directory() . '/inc/shortcode_contacto_sm_ubicacion.php';
+
 ?>
