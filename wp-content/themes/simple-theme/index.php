@@ -17,6 +17,17 @@
 
 		<?php endwhile; ?>
 
+		<?php if ( get_previous_posts_link() || get_next_posts_link() ): ?>
+			<div class="navigation">
+				<div class="previous">
+					<?php previous_posts_link( __( '&laquo; Anterior', 'simple-theme' ) ) ?>
+				</div>
+				<div class="next">
+					<?php next_posts_link( __( 'Siguiente &raquo;', 'simple-theme' ) ) ?>
+				</div>
+			</div><!-- .navigation -->
+		<?php endif ?>
+
 	<?php endif; ?>
 
 </main><!-- #post-page -->

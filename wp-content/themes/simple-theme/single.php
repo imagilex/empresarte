@@ -7,9 +7,11 @@
 		<?php while( have_posts() ): the_post(); ?>
 
 			<article class="post">
+				
 				<header class="entry-header">
 					<h2><?php the_title(); ?></h2>
 				</header>
+				
 				<div class="entry-content">
 					<?php the_content(); ?>
 				</div><!-- #entry-content -->
@@ -18,6 +20,12 @@
 					<p>Por <?php the_author(); ?></p>
 					<p><?php the_date(); ?></p>
 				</footer>
+
+				<?php
+				if ( comments_open() || get_comments_number() ) {
+					comments_template();
+				}
+				?>
 
 			</article>
 
