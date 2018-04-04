@@ -46,4 +46,35 @@ require_once get_template_directory() . '/inc/customizer.php' ;
 
 require_once get_template_directory() . '/inc/shortcode_contacto_sm_ubicacion.php';
 
+/***** Comentarios *****/
+
+function simpleTheme_comment( $comment, $args, $depth ) {
+	?>
+	<li>
+		<article class="comment">
+			<div class="comment-author">
+				<?php echo get_avatar( get_comment_author_email(), 50, '', get_comment_author() ); ?>
+				<span class="author-name"><?php comment_author_link(); ?></span>
+			</div><!-- .comment-author -->
+			<div class="comment-content">
+				<?php if ( '0' == $comment->comment_approved ): ?>
+					<em><?php __('Pendiente de aprobación', 'simple-theme' ); ?></em>em>
+				<?php endif ?>
+				<?php comment_text(); ?>
+			</div><!-- .comment-content -->
+			<div class="comment-footer">
+				<span class="comment-date"><?php comment_date(); ?></span>
+				<?php 
+				comment_reply_link( array_merge( $args, array(
+					'reply_text'	=> __( 'Responder', 'simple-theme' ),
+					'depth'			=> $depth,
+					'max_depth'		=> $args[ 'max_depth' ]
+				) ) ); 
+				edit_comment_link( __( 'Editar', 'simple_theme' ) );
+				?>
+			</div><!-- .comment-footer -->
+		</article><!-- .comment -->
+	<?php
+}
+
 ?>

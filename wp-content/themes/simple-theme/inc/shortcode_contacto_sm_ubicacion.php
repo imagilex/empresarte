@@ -1,10 +1,10 @@
 <?php
-/***** [ContactoUbicacionSocialMedia elementos="correo,telefono,whatsapp,skype-chat,skype-call,fb-messenger,instagram,facebook,twitter,youtube,vimeo,pinterest,vine,linkedin,google-plus,direccion" id=""] ******/
+/***** [ContactoUbicacionSocialMedia elementos="telefono,whatsapp,correo,skype-chat,skype-call,fb-messenger,instagram,facebook,twitter,youtube,vimeo,pinterest,vine,linkedin,google-plus,direccion" id=""] ******/
 
 
 function simpleTheme_shortcode_contacto_ubicacion_socialmedia( $atts, $content ) {
 	$atts = shortcode_atts( array(
-		"elementos" => "correo,telefono,whatsapp,skype-chat,skype-call,fb-messenger,instagram,facebook,twitter,youtube,vimeo,pinterest,vine,linkedin,google-plus,direccion",
+		"elementos" => "telefono,whatsapp,correo,skype-chat,skype-call,fb-messenger,instagram,facebook,twitter,youtube,vimeo,pinterest,vine,linkedin,google-plus,direccion",
 		"id" => ''
 	), $atts );
 	$sm_tipo_desplegado = get_theme_mod( 'sm_tipo_desplegado' );

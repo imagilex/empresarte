@@ -21,6 +21,7 @@ body {
 
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
 a:hover, a:active {
@@ -29,7 +30,6 @@ a:hover, a:active {
 
 p {
 	line-height: 1.5em;
-	text-align: justify;
 }
 
 p a {
@@ -40,11 +40,11 @@ img.alignleft, img.alignright {
 	margin: 10px;
 }
 
-img.alignleft {
+.alignleft {
 	float: left;
 }
 
-img.alignright {
+.alignright {
 	float: right;
 }
 
@@ -266,6 +266,110 @@ img.fullwidth {
 	word-wrap: break-word;
 }
 
+.navigation {
+	padding: 2em;
+}
+
+.navigation div {
+	display: inline-block;
+	width: 48%
+}
+
+.navigation div a {
+	text-decoration: none;
+	font-weight: bolder;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.navigation .previous {
+	margin-right: 4%
+}
+
+.navigation .next {
+	text-align: right;
+	float: right;
+}
+
+#comments {
+	font-size: 80%;
+	border-style: solid;
+	border-color: transparent;
+	border-width: 1px;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+#comments ol, #comments ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+#comments ol li, #comments ul li {
+	margin: 5px 0;
+}
+
+#comments ol li ul li, #comments ul li ul li {
+	margin-left: 30px;
+}
+
+#comments ol li ul li article, #comments ul li ul li article {
+	padding-left: 30px;
+	border-left: 2px solid;
+}
+
+#comments .comment-author img {
+	float: left;
+	margin-right: 10px;
+	height: 50px;
+	width: 50px;
+	border-radius: 50px;
+}
+
+#comments .comment-author span {
+	font-weight: bolder;
+	line-height: 50px;
+}
+
+#comments .comment-footer {
+	font-size: 75%;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+
+#respond a,
+#comments .comment-footer a{
+	margin-left: 10px;
+	display: inline-block;
+}
+
+#respond h4 small{
+	font-size: 80%;
+}
+
+#respond label {
+	display: block;
+}
+
+#comments textarea,
+#comments input[type="text"],
+#comments input[type="email"],
+#comments input[type="url"]
+{
+	width: 100%;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+#respond a,
+#comments .comment-footer a,
+#respond input.submit,
+.btn {
+	padding: 10px;
+	border-radius: 5px;
+	letter-spacing: 2px;
+}
+
 /***** Fuentes *****/
 body,
 #main-header h1, #main-header h2,#main-header h3, #main-header h4, #main-header h5, #main-header h6,
@@ -276,3 +380,4 @@ body,
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Glegoo', sans-serif;
 }
+
