@@ -1,0 +1,142 @@
+/*
+
+Theme Name: Tema Simple - Imagilex
+Theme URI: hhtp://www.imagilex.com.mx
+Description: Tema simple adaptado para imagilex
+Author: Rubén Ramírez Gómez
+Author URI: mailto:rramirez@imagilex.com.mx
+Version: 1.0.0
+Tags: responsive, minimalist, simple, white, black, social navigation bar, theme options
+Text Domain: simple-theme-child
+License: GNU General Public License v2 or Later
+License URI: http://www.gnu.org/licences/gpl-2.0.html
+Template: simple-theme
+
+*/
+
+a.alignright {
+	margin: 3px;
+}
+
+.enabled {
+	color: #16cc52;
+}
+
+.disabled {
+	color: #c4c6c5;
+}
+
+.proyecto-epica {
+	border: 2px solid;
+	border-radius: 5px;
+	display: inline-block;
+	width: 40%;
+	margin: 5px;
+	min-width: 250px;
+	padding: 10px;
+	font-size: 85%;
+	vertical-align: top;
+}
+
+.proyecto-epica h4 a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.proyecto-epica h4 a:hover {
+	text-decoration: none;
+}
+
+.read-more-btn {
+	border: 2px solid;
+	border-radius: 5px;
+	display: inline-block;
+	-webkit-filter: brightness( 110% );
+	filter: brightness( 110% );
+	text-decoration: none;
+	padding: 5px;
+	color: #fff;
+	float: right;
+}
+
+.read-more-btn:hover {
+	-webkit-filter: brightness( 100% );
+	filter: brightness( 100% );
+	text-decoration: none;
+}
+
+.tag-btn {
+	border-radius: 5px;
+	color: #fff;
+	/*margin: 0px 5px;*/
+	width: 26px;
+	height: 23px;
+	display: inline-block;
+	text-align: center;
+	padding: 3px;
+}
+
+.tag-mejora, .tag-historia {
+	background-color: #4bf442;
+}
+
+.tag-error {
+	background-color: #ba1105;
+}
+
+.tag-cambio, .tag-configuracion, .tag-tarea {
+	background-color: #c4c6c5;
+}
+
+.tag-menor {
+	color: #4bf442;
+}
+
+.tag-bloqueadora, .tag-critica, .tag-mayor {
+	color: #ba1105;
+}
+
+.tag-trivial {
+	color: #c4c6c5;
+}
+
+#dataTask p{
+	margin: 0;
+	padding: 0;
+	font-size: 80%;
+}
+
+#epicas-tareas ul {
+	list-style: none;
+	margin: 0px;
+	padding: 3px;
+}
+
+#epicas-tareas ul li {
+	border: 2px solid;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+#epicas-tareas ul li a {
+	display: block;
+}
+
+.entry-excerpt-scrum {
+	font-size: 75%;
+}
+
+.tag-title {
+	color: #ffffff;
+	border-radius: 5px;
+	font-size: 12px;
+	padding: 5px;
+}
+
+.entry-header h2 .tag-btn {
+	font-size: 14pt;
+}
+
+.to-upper-case {
+	text-transform: uppercase;
+}

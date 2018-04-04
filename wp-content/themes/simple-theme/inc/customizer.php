@@ -141,9 +141,31 @@ function simpleTheme_theme_customize_css() {
 			background-color: <?php echo $color_fondo_pie_pagina; ?>;
 		}
 
+		.navigation div a {
+			background-color: <?php echo $color_fondo_pie_pagina; ?>;
+			color: <?php echo $color_texto_pie_pagina; ?>;
+		}
+
 		.social-navbar ul li {
 			border-color: <?php echo $color_social_media; ?>;
 			color: <?php echo $color_social_media; ?>;
+		}
+
+		#comments {
+			border-left-color: <?php echo $color_fondo_encabezado; ?>;
+			border-top-color: <?php echo $color_fondo_encabezado; ?>;
+		}
+
+		#comments ol li ul li article, #comments ul li ul li article {
+			border-left-color: <?php echo $color_fondo_encabezado; ?>;
+		}
+
+		#respond a,
+		#comments .comment-footer a,
+		#respond input.submit,
+		.btn {
+			background-color: <?php echo $color_fondo_encabezado; ?>;
+			color: <?php echo $color_texto_encabezado; ?>
 		}
 
 		@media screen and ( max-width: 500px ) {
