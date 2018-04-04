@@ -4,13 +4,21 @@
 
 	<?php if( have_posts() ): ?>
 
-		<?php while( have_posts() ): the_post(); ?>
+		<?php while( have_posts() ): the_post(); 
+			$metas = new MyMetas( get_the_ID() ); 
+			$clase_snowflake = ( $metas->getMeta( 'activo' ) == 'true' ? 'enabled' : 'disabled' );
+			?>
 
 			<article class="post">
 				<header class="entry-header">
-					<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+					<h2>
+						<a href="<?php the_permalink() ?>">
+							<i class="fas fa-snowflake <?php echo $clase_snowflake; ?>"></i>
+							<?php the_title(); ?>
+						</a>
+					</h2>
 				</header>
-				<div class="entry-excerpt">
+				<div class="entry-excerpt-scrum">
 					<?php the_excerpt(); ?>
 				</div><!-- #entry-excerpt -->
 			</article>
