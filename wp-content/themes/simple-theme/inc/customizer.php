@@ -98,6 +98,33 @@ function simpleTheme_theme_customize_register( $wp_customize ) {
 
 	simpleTheme_add_setting_and_control( $wp_customize, 'header_img', 'image', 'Imagen de Encabezado', 'title_tagline' );
 
+	/***** Tamaño de Fuente en Encabezado *****/
+
+	simpleTheme_add_setting_and_control( $wp_customize, 'site_name_size', 'select', 'Tamaño de Fuente del Nombre', 'title_tagline', '21pt', null, null, array(
+		'8pt'	=> __( '8pt', 'simple-theme' ),
+		'9pt'	=> __( '9pt', 'simple-theme' ),
+		'10pt'	=> __( '10pt', 'simple-theme' ),
+		'11pt'	=> __( '11pt', 'simple-theme' ),
+		'12pt'	=> __( '12pt', 'simple-theme' ),
+		'14pt'	=> __( '14pt', 'simple-theme' ),
+		'18pt'	=> __( '18pt', 'simple-theme' ),
+		'21pt'	=> __( '21pt', 'simple-theme' ),
+		'21pt'	=> __( '24pt', 'simple-theme' ),
+		'30pt'	=> __( '30pt', 'simple-theme' ),
+		'36pt'	=> __( '36pt', 'simple-theme' )
+	) );
+
+	simpleTheme_add_setting_and_control( $wp_customize, 'site_desc_size', 'select', 'Tamaño de Fuente de la Descripción', 'title_tagline', '11pt', null, null, array(
+		'8pt'	=> __( '8pt', 'simple-theme' ),
+		'9pt'	=> __( '9pt', 'simple-theme' ),
+		'10pt'	=> __( '10pt', 'simple-theme' ),
+		'11pt'	=> __( '11pt', 'simple-theme' ),
+		'12pt'	=> __( '12pt', 'simple-theme' ),
+		'14pt'	=> __( '14pt', 'simple-theme' ),
+		'18pt'	=> __( '18pt', 'simple-theme' ),
+		'21pt'	=> __( '21pt', 'simple-theme' )
+	) );
+
 }
 
 add_action( 'customize_register', 'simpleTheme_theme_customize_register' );
@@ -113,6 +140,9 @@ function simpleTheme_theme_customize_css() {
 	$color_fondo_pie_pagina = get_theme_mod( 'color_fondo_pie_pagina', '#000' );
 	$color_texto_pie_pagina = get_theme_mod( 'color_texto_pie_pagina', "#fff" );
 	$color_social_media = get_theme_mod( 'color_social_media', "#000" );
+
+	$tamanio_fuente_site_name = get_theme_mod( 'site_name_size', '21pt' );
+	$tamanio_fuente_site_desc = get_theme_mod( 'site_desc_size', '11pt' );
 
 	?>
 	<style type="text/css">
@@ -172,6 +202,14 @@ function simpleTheme_theme_customize_css() {
 			.main-menu-btn {
 				color: <?php echo $color_texto_encabezado; ?>;
 			}
+		}
+
+		#header-title h1 {
+			font-size: <?php echo $tamanio_fuente_site_name; ?>;
+		}
+
+		#header-title h3 {
+			font-size: <?php echo $tamanio_fuente_site_desc; ?>;
 		}
 
 	</style>
