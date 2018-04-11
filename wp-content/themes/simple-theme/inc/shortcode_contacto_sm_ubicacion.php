@@ -1,11 +1,13 @@
 <?php
-/***** [ContactoUbicacionSocialMedia elementos="telefono,whatsapp,correo,skype-chat,skype-call,fb-messenger,instagram,facebook,twitter,youtube,vimeo,pinterest,vine,linkedin,google-plus,direccion" id=""] ******/
+/***** [ContactoUbicacionSocialMedia elementos="telefono,whatsapp,correo,skype-chat,skype-call,fb-messenger,instagram,facebook,twitter,youtube,vimeo,pinterest,vine,linkedin,google-plus,direccion" id="" share_whatsapp=--get_theme_mod( 'share_whatsapp' )--|"true" share_email]=--get_theme_mod( 'share_email' )--|"true" ******/
 
 
 function simpleTheme_shortcode_contacto_ubicacion_socialmedia( $atts, $content ) {
 	$atts = shortcode_atts( array(
 		"elementos" => "telefono,whatsapp,correo,skype-chat,skype-call,fb-messenger,instagram,facebook,twitter,youtube,vimeo,pinterest,vine,linkedin,google-plus,direccion",
-		"id" => ''
+		"id" => '',
+		"share_whatsapp" => get_theme_mod( 'share_whatsapp' ),
+		"share_email" => get_theme_mod( 'share_email' )
 	), $atts );
 	$sm_tipo_desplegado = get_theme_mod( 'sm_tipo_desplegado' );
 	$sm_instagram = get_theme_mod( 'sm_instagram', '' );
@@ -25,6 +27,10 @@ function simpleTheme_shortcode_contacto_ubicacion_socialmedia( $atts, $content )
 	$sm_skype_videollamada = get_theme_mod( 'sm_skype_videollamada', '' );
 	$sm_messenger = get_theme_mod( 'sm_messenger', '' );
 	$sm_direccion = get_theme_mod( 'sm_direccion', '' );
+
+	$share_whatsapp = ( "true" === $atts[ "share_whatsapp" ] || true === $atts[ "share_whatsapp" ] );
+	$share_email = ( "true" === $atts[ "share_email" ] || true === $atts[ "share_email" ] );
+
 	ob_start();
 	?>
 	<nav <?php echo ( "" != $atts[ "id"] ? 'id="' . $atts[ "id"] . '"' : '' ); ?> class="social-navbar">
@@ -305,6 +311,33 @@ function simpleTheme_shortcode_contacto_ubicacion_socialmedia( $atts, $content )
 			}
 			?>
 		</ul>
+		<?php if ( true === $share_whatsapp || true === $share_email ): 
+			$subject = 'Perfil de ' . get_bloginfo( 'name' );
+			$body = 'Te envío el perfil de ' . get_bloginfo( 'name' ) . ': ' . get_bloginfo( 'url' );
+			$acentos = array( 'á', 'é', 'í', 'ó', 'ú', 'ü', 'Á', 'É', 'Í', 'Ó', 'Ú', 'Ü' );
+			$no_acentos = array( 'a', 'e', 'i', 'o', 'u', 'u', 'A', 'E', 'I', 'O', 'U', 'U' );
+			$subject = str_replace( $acentos, $no_acentos, $subject);
+			$body = str_replace( $acentos, $no_acentos, $body);
+			?>
+			<ul>
+				<?php if ( true === $share_whatsapp ): ?>
+					<li>
+						<a href="https://api.whatsapp.com/send?text=<?php echo $body; ?>" target="_blank">
+							<i class="fab fa-whatsapp-square fa-2x"></i>
+							<span class="data"><?php echo __( 'Compartir por WhatsApp', 'simple-theme' ); ?></span>
+						</a>
+					</li>
+				<?php endif ?>
+				<?php if ( true === $share_email ): ?>
+					<li>
+						<a href="mailto:?subject=<?php echo $subject; ?>&body=<?php echo $body; ?>">
+							<i class="fas fa-envelope-square fa-2x"></i>
+							<span class="data"><?php echo __( 'Compartir por Correo', 'simple-theme' ); ?></span>
+						</a>
+					</li>
+				<?php endif ?>
+			</ul>
+		<?php endif ?>
 	</nav>
 	<?php
 	return ob_get_clean();
