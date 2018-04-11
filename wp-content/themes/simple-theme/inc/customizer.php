@@ -84,6 +84,9 @@ function simpleTheme_theme_customize_register( $wp_customize ) {
 	simpleTheme_add_setting_and_control( $wp_customize, 'sm_linkedin', 'text', 'LinkedIn', 'simple-theme_seccion_social_media', null, 'sanitize_text_field', 'Para https://www.linkedin.com/in/usuario/ debes llenar con <strong>usuario</strong>' );
 	simpleTheme_add_setting_and_control( $wp_customize, 'sm_googleplus', 'text', 'Google+', 'simple-theme_seccion_social_media', null, 'sanitize_text_field', 'Para https://plus.google.com/+usuario debes llenar con <strong>usuario</strong>' );
 
+	simpleTheme_add_setting_and_control( $wp_customize, 'share_whatsapp', 'checkbox', "¿Mostrar compartir por Whats App?", 'simple-theme_seccion_social_media' );
+	simpleTheme_add_setting_and_control( $wp_customize, 'share_email', 'checkbox', "¿Mostrar compartir por email?",'simple-theme_seccion_social_media' );
+
 	/***** Pie de Página *****/
 
 	$wp_customize->add_section( 'simple-theme_seccion_pie_pagina', array(
